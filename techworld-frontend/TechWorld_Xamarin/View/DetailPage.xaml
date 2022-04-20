@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TechWorld_Xamarin.View.DetailPage"
+             BackgroundImageSource="https://i.pinimg.com/originals/5a/d1/84/5ad184cfa76db0e62c4921b9ea15aa1e.jpg">
+    
+    <StackLayout>
+        <Grid>
+            <ScrollView>
+                 <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="0" Margin="10,20,10,20" Spacing="50">
+                    <Frame  BackgroundColor="WhiteSmoke" HasShadow="True"  CornerRadius="10">
+
+                        <StackLayout>
+                             <Label x:Name="Label_title" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+
+                             <Image HorizontalOptions="Center"  VerticalOptions="Center" x:Name="Image_link"/>
+
+                            <Label Text="La marca del prodotto è:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                            <Label x:Name="Label_marca"  FontSize="16" FontAttributes="Bold"/>
+                        
+                            <Label Text="Il prezzo del prodotto è:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                            <Label x:Name="Label_prezzo"  FontSize="16" FontAttributes="Bold"/>
+                        
+                            <Label Text="Descrizione:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                            <Label x:Name="Label_descrizione" FontSize="16" FontAttributes="Bold"/>
+
+                            <Label Text="Quantità in magazzino:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                            <Label x:Name="Label_qta" FontSize="16" FontAttributes="Bold"/>
+
+                            <Button Clicked="AddCart_Clicked" Text="Aggiungi al carrello!" ImageSource="addShoppingCart.xml" BackgroundColor="Orange"/>
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </StackLayout>
+</ContentPage>

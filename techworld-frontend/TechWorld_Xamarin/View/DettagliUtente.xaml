@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TechWorld_Xamarin.View.DettagliUtente"
+             IconImageSource="account.xml"
+             Title="Account"
+             BackgroundImageSource="https://i.pinimg.com/originals/5a/d1/84/5ad184cfa76db0e62c4921b9ea15aa1e.jpg">
+    
+    <StackLayout>
+        <Grid>
+            <StackLayout Padding="0" Margin="10,20,10,20" HorizontalOptions="FillAndExpand">
+                <Frame  BackgroundColor="WhiteSmoke" HasShadow="True"  CornerRadius="10">
+
+                    <StackLayout>
+                        
+                        <Label x:Name="Label_title" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+
+                        <Grid>
+                            <StackLayout Grid.Row="0" Grid.Column="0">
+                                <Label Text="Nome:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                                <Label x:Name="Label_nome"  FontSize="17" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="0" Grid.Column="1">
+                                <Label Text="Cognome:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                                <Label x:Name="Label_cognome"  FontSize="17" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="1" Grid.Column="0">
+                                <Label Text="Cell Phone:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                                <Label x:Name="Label_phone" FontSize="17" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="1" Grid.Column="1">
+                                <Label Text="Email:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                                <Label x:Name="Label_email" FontSize="17" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Grid>
+
+                        <Label Text="Monete disponibili:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                        <Label x:Name="Label_coin" FontSize="17" FontAttributes="Bold"/>
+
+                        <Label Text="Compra qui altre monete se serve" HorizontalOptions="Center" VerticalOptions="Center"
+                               FontAttributes="Bold" FontSize="17" TextColor="Black"/>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Button Text="50$" Clicked="shop50" BackgroundColor="Orange" TextColor="White" FontSize="18"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Button Text="100$" Clicked="shop100" BackgroundColor="Orange" TextColor="White" FontSize="18"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Button Text="200$" Clicked="shop200" BackgroundColor="Orange" TextColor="White" FontSize="18"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="1">
+                                <Button Text="500$" Clicked="shop500" BackgroundColor="Orange" TextColor="White" FontSize="18"/>
+                            </StackLayout>
+                        </Grid>
+
+                        <Label Text="Qui puoi effettuare il logout oppure vedere la lista dei tuoi ordini precedenti:" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+
+                        <Grid>
+                            <StackLayout Grid.Column="0">
+                                <Button Text="LOGOUT" Clicked="logout" BackgroundColor="CadetBlue" TextColor="White" FontSize="18"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1">
+                                <Button Text="Ordini" Clicked="viewOrder" BackgroundColor="CadetBlue" TextColor="White" FontSize="18"/>
+                            </StackLayout>
+                        </Grid>
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

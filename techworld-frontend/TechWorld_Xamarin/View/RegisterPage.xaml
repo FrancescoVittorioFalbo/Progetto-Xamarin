@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--vecchio link https://mfiles.alphacoders.com/773/773507.jpg-->    
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TechWorld_Xamarin.View.RegisterPage"
+             BackgroundImageSource="https://i.pinimg.com/originals/5a/d1/84/5ad184cfa76db0e62c4921b9ea15aa1e.jpg">
+
+    <NavigationPage.TitleView >
+        <Label Text="TECHWORLD" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="20"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout >
+        <Grid>
+
+            <StackLayout Padding="0" Margin="10,50,10,0" HorizontalOptions="FillAndExpand">
+                <Frame  BackgroundColor="WhiteSmoke" HasShadow="True"  CornerRadius="10">
+
+                    <StackLayout>
+
+
+                        <StackLayout Margin="10">
+                            <Label Text="Registrati" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="15,10">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://cdn5.vectorstock.com/i/1000x1000/51/99/icon-user-avatar-for-web-site-or-mobile-app-vector-3125199.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="Entry_Username" Placeholder="Username" TextColor="Gray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="http://www.descartesbiometrics.com/wp-content/uploads/2014/08/lock-icon1.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True" TextColor="Gray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://cdn5.vectorstock.com/i/1000x1000/51/99/icon-user-avatar-for-web-site-or-mobile-app-vector-3125199.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="Entry_Nome" Placeholder="Nome" TextColor="Gray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://cdn5.vectorstock.com/i/1000x1000/51/99/icon-user-avatar-for-web-site-or-mobile-app-vector-3125199.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="Entry_Cognome" Placeholder="Cognome" TextColor="Gray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://www.vippng.com/png/detail/10-103323_phone-icons-teal-mobile-app-icon-transparent-background.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="Entry_PhoneNumber" Placeholder="PhoneNumber" TextColor="Gray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://p1.hiclipart.com/preview/826/713/170/flader-82-default-icons-for-apple-app-mac-os-x-mail-white-mail-icon.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="Entry_Email" Placeholder="Email" TextColor="Gray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Button Text="REGISTER" BackgroundColor="OrangeRed" TextColor="White" CornerRadius="30" Clicked="RegisterProcedure"/>
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

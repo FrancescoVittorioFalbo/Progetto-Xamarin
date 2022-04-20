@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TechWorld_Xamarin.View.LoginPage"
+             BackgroundImageSource="https://i.pinimg.com/originals/5a/d1/84/5ad184cfa76db0e62c4921b9ea15aa1e.jpg">
+
+    <NavigationPage.TitleView>
+        <Label Text="TECHWORLD" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold" FontSize="20"/>
+    </NavigationPage.TitleView>
+    
+    <StackLayout>
+        <Grid>
+            
+            <StackLayout Padding="0" Margin="10,50,10,0" HorizontalOptions="FillAndExpand">
+                <Frame  BackgroundColor="WhiteSmoke" HasShadow="True"  CornerRadius="10"> 
+
+                    <StackLayout>
+
+                        <StackLayout Margin="10">
+                            <Label Text="Esegui il login" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="15,10">
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <!--vecchio link  https://www.findool.com/images/avatars/avatar.png-->
+                                        <Image Source="https://cdn5.vectorstock.com/i/1000x1000/51/99/icon-user-avatar-for-web-site-or-mobile-app-vector-3125199.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="Entry_Username" Placeholder="Username" TextColor="Gray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <!-- https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg-->
+                                        <Image Source="http://www.descartesbiometrics.com/wp-content/uploads/2014/08/lock-icon1.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True" TextColor="Gray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Button Text="SIGN IN" BackgroundColor="OrangeRed" TextColor="White" CornerRadius="30" Clicked="SignInProcedure"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Label Text="Still Not Connected ?" TextColor="DarkGray" FontSize="Small"/>
+                                <Label StyleClass="Link" Text="Sign Up" TextColor="OrangeRed" FontAttributes="Bold" FontSize="Small">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </StackLayout>
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

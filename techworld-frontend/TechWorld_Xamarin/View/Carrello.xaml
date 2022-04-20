@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TechWorld_Xamarin.View.Carrello"
+             IconImageSource="shoppingCart.xml"
+             Title="Carrello"
+             BackgroundImageSource="https://i.pinimg.com/originals/5a/d1/84/5ad184cfa76db0e62c4921b9ea15aa1e.jpg">
+
+
+    <StackLayout>
+        <Grid>
+
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="0" Margin="10,20,10,20" Spacing="50">
+                <Frame BackgroundColor="WhiteSmoke" HasShadow="True" CornerRadius="10">
+
+                    <StackLayout>
+                        <Label Text="CARRELLO" FontSize="20" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Start"/>
+
+                        <ListView x:Name="ShowCart" ItemsSource="{Binding cart}" HasUnevenRows="True" MinimumHeightRequest="150">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid>
+                                            <StackLayout Grid.Column="0">
+                                                <Image Source="{Binding link}" WidthRequest="50" HeightRequest="50"/>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="1">
+                                                <Label Text="{Binding nome}" FontSize="16" FontAttributes="Bold" TextColor="Black"/>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="2">
+                                                <Label Text="{Binding prezzo, StringFormat='{0:N}$'}" FontSize="16" FontAttributes="Bold" TextColor="DarkGray"/>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="3">
+                                                <Button CommandParameter="{Binding nome}" ImageSource="removeShoppingCart.xml" Clicked="remove" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                        <Label Text="Il costo dell'ordine attuale è di:" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
+                        <Label x:Name="Label_costoTotale" TextColor="Gray" FontSize="18" FontAttributes="Bold"/>
+
+                        <Label Text="Inserisci qui i dettagli della spedizione!" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
+
+                        <StackLayout Grid.Row="0">
+                            <Label Text="Città:" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
+                            <Entry x:Name="Entry_citta" TextColor="Gray" FontAttributes="None"/>
+                        </StackLayout>
+
+                        <Grid MinimumHeightRequest="100">
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Via:" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
+                                <Entry x:Name="Entry_via" TextColor="Gray" FontAttributes="None"/>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="Numero Civico:" FontSize="18" TextColor="Black" FontAttributes="Bold"/>
+                                <Entry x:Name="Entry_nr" TextColor="Gray" FontAttributes="None"/>
+                            </StackLayout>
+                        </Grid>
+
+                        <Button Text="ORDER NOW" BackgroundColor="OrangeRed" TextColor="White" CornerRadius="30" Clicked="ProcedeOrder"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>
